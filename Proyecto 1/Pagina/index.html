@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Simple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Foro Simple</h1>
+
+        <!-- Formulario de Login -->
+        <div id="login-form">
+            <input type="text" id="login-usuario" placeholder="Usuario" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button id="login-btn">Iniciar sesión</button>
+            <p>¿No tienes cuenta? <span id="mostrar-registro">Regístrate aquí</span></p>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="registro-form" style="display: none;">
+            <input type="text" id="registro-usuario" placeholder="Crea un usuario" required>
+            <input type="password" id="registro-password" placeholder="Crea una contraseña" required>
+            <button id="registro-btn">Registrar</button>
+            <p>¿Ya tienes cuenta? <span id="mostrar-login">Inicia sesión aquí</span></p>
+        </div>
+
+        <!-- Área de publicación visible después del login -->
+        <div id="foro" style="display: none;">
+            <p id="usuario-bienvenida"></p>
+            <div id="formulario-publicacion">
+                <input type="text" id="titulo" placeholder="Título del tema" required>
+                <textarea id="contenido" placeholder="Escribe el contenido aquí..." required></textarea>
+
+                <!-- Campo para adjuntar archivos -->
+                <input type="file" id="archivo" multiple>
+                <div id="adjuntos-preview"></div> <!-- Previsualización de archivos -->
+
+                <button id="publicar-btn">Publicar</button>
+            </div>
+
+            <div id="publicaciones">
+                <h2>Temas del Foro</h2>
+                <div id="lista-publicaciones"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
