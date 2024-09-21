@@ -1,51 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foro Simple</title>
+    <title>Get Robux</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Foro Simple</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Robux</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Get Robux</h1>
+        <p>Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
+    </section>
 
-        <!-- Formulario de Login -->
-        <div id="login-form">
-            <input type="text" id="login-usuario" placeholder="Usuario" required>
-            <input type="password" id="login-password" placeholder="Contraseña" required>
-            <button id="login-btn">Iniciar sesión</button>
-            <p>¿No tienes cuenta? <span id="mostrar-registro">Regístrate aquí</span></p>
-        </div>
+    <section class="username-section">
+        <form action="#" method="POST">
+            <label for="username">• Roblox username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username..." required>
+            <button type="submit">Next</button>
+        </form>
+    </section>
 
-        <!-- Formulario de Registro -->
-        <div id="registro-form" style="display: none;">
-            <input type="text" id="registro-usuario" placeholder="Crea un usuario" required>
-            <input type="password" id="registro-password" placeholder="Crea una contraseña" required>
-            <button id="registro-btn">Registrar</button>
-            <p>¿Ya tienes cuenta? <span id="mostrar-login">Inicia sesión aquí</span></p>
-        </div>
-
-        <!-- Área de publicación visible después del login -->
-        <div id="foro" style="display: none;">
-            <p id="usuario-bienvenida"></p>
-            <div id="formulario-publicacion">
-                <input type="text" id="titulo" placeholder="Título del tema" required>
-                <textarea id="contenido" placeholder="Escribe el contenido aquí..." required></textarea>
-
-                <!-- Campo para adjuntar archivos -->
-                <input type="file" id="archivo" multiple>
-                <div id="adjuntos-preview"></div> <!-- Previsualización de archivos -->
-
-                <button id="publicar-btn">Publicar</button>
-            </div>
-
-            <div id="publicaciones">
-                <h2>Temas del Foro</h2>
-                <div id="lista-publicaciones"></div>
-            </div>
-        </div>
-    </div>
+    <footer>
+        <p>Copyright 2024 ©Alx</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
