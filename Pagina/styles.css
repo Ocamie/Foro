@@ -1,3 +1,12 @@
+:root {
+    --background-color: #181818;
+    --header-background: #000;
+    --section-background: #1e1e1e;
+    --button-color: #28a745;
+    --text-color: white;
+    --secondary-text-color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +15,8 @@
 }
 
 body {
-    background-color: #181818;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +24,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #000;
+    background-color: var(--header-background);
     padding: 10px 0;
 }
 
@@ -31,7 +40,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bold;
 }
@@ -48,11 +57,11 @@ header nav ul li a {
 
 .hero p {
     font-size: 18px;
-    color: #ccc;
+    color: var(--secondary-text-color);
 }
 
 .username-section {
-    background-color: #1e1e1e;
+    background-color: var(--section-background);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -80,15 +89,20 @@ header nav ul li a {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--text-color);
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Añadir efecto al pasar el ratón */
+}
+
+.username-section button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
 }
 
 footer {
     margin-top: auto;
     padding: 20px;
     text-align: center;
-    color: #ccc;
+    color: var(--secondary-text-color);
 }
